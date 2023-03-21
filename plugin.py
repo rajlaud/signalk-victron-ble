@@ -136,6 +136,14 @@ class SignalKScanner(Scanner):
                             "path": f"electrical.solar.{id_}.chargingMode",
                             "value": data.get_charge_state().name.lower(),
                         },
+                        {
+                            "path": f"electrical.solar.{id_}.power",
+                            "value": data.get_solar_power(),
+                        },
+                        {
+                            "path": f"electrical.solar.{id_}.yield_today",
+                            "value": data.get_yield_today(),
+                        },
                     ],
                 },
             ],
